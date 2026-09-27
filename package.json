@@ -1,0 +1,21 @@
+{
+  "name": "blockchain-fake-review-detection-system",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server",
+    "contracts"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev:client": "npm run dev --workspace client",
+    "dev:server": "npm run dev --workspace server",
+    "start:client": "npm run dev --workspace client",
+    "start:server": "npm run dev --workspace server",
+    "dev:contracts": "npm run node --workspace contracts",
+    "build": "npm run build --workspace client",
+    "lint": "npm run lint --workspace client && npm run lint --workspace server",
+    "deploy:contract": "npm run deploy:sepolia --workspace contracts"
+  }
+}
